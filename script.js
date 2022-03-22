@@ -38,3 +38,10 @@ function setLineClass() {
   });
 }
 setLineClass();
+
+const listLi = document.getElementById('lista-tarefas');
+function clearList() {
+  listLi.innerText = '';
+}
+const clearButton = document.getElementById('apaga-tudo');
+clearButton.addEventListener('click', clearList);
