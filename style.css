@@ -1,8 +1,60 @@
 .selected {
-    background-color: gray;
+  background-color: gray;
 }
 
 .completed {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
+body {
+  background-color: blanchedalmond;
+}
+
+header {
+  font-size: 50px;
+  text-align: center;
+  color: brown;
+}
+
+p {
+  font-size: 30px;
+  text-align: center;
+  color: brown;
+}
+
+section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#criar-tarefa {
+  color: brown;
+  background-color: darkgray;
+  font-size: 20px;
+}
+
+#apaga-tudo {
+  color: brown;
+  background-color: darkgray;
+  font-size: 20px;
+}
+
+#remover-finalizados {
+  color: brown;
+  background-color: darkgray;
+  font-size: 20px;
+}
+
+#lista-tarefas {
+  display: table;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 30px;
+  color: brown;
+}
+
+#texto-tarefa {
+  background-color: darkkhaki;
+  font-size: 20px;
+  color: brown;
+}
