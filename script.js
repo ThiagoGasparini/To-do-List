@@ -25,19 +25,21 @@ function setTaskClass() {
 }
 setTaskClass();
 
-function setLineClass() {
-  let selectedTask = document.getElementsByClassName('completed');
-  let myTasks = document.querySelector('#lista-tarefas');
-
-  myTasks.addEventListener('dblclick', (event) => {
-    if (selectedTask.length === 0) {
-      event.target.classList.add('completed');
-    } else {
+function completedClass() {
+  const list = document.getElementById('lista-tarefas');
+  const completedTask = document.getElementsByClassName('completed');
+  list.addEventListener('dblclick', (event) => {
+    if (
+      completedTask.length !== 0 &&
+      event.target.classList.contains('completed')
+    ) {
       event.target.classList.remove('completed');
+    } else {
+      event.target.classList.add('completed');
     }
   });
 }
-setLineClass();
+completedClass();
 
 const listLi = document.getElementById('lista-tarefas');
 function clearList() {
@@ -45,3 +47,12 @@ function clearList() {
 }
 const clearButton = document.getElementById('apaga-tudo');
 clearButton.addEventListener('click', clearList);
+
+function removeCompletos() {
+  const lista = document.querySelectorAll('.completed');
+  for (let i = 0; i < lista.length; i += 1) {
+    lista[i].parentElement.removeChild(lista[i]);
+  }
+}
+const clearCButton = document.getElementById('remover-finalizados');
+clearCButton.addEventListener('click', removeCompletos);
