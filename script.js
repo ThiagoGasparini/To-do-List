@@ -12,8 +12,8 @@ const getBtn = document.getElementById('criar-tarefa');
 getBtn.addEventListener('click', addNewTask);
 
 function setTaskClass() {
-  let selectedTask = document.getElementsByClassName('selected');
-  let myTasks = document.querySelector('#lista-tarefas');
+  const selectedTask = document.getElementsByClassName('selected');
+  const myTasks = document.querySelector('#lista-tarefas');
 
   myTasks.addEventListener('click', (event) => {
     if (selectedTask.length === 0) {
@@ -30,8 +30,8 @@ function completedClass() {
   const completedTask = document.getElementsByClassName('completed');
   list.addEventListener('dblclick', (event) => {
     if (
-      completedTask.length !== 0 &&
-      event.target.classList.contains('completed')
+      completedTask.length !== 0
+      && event.target.classList.contains('completed')
     ) {
       event.target.classList.remove('completed');
     } else {
